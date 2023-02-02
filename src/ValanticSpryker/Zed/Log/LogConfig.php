@@ -4,8 +4,8 @@ declare(strict_types = 1);
 
 namespace ValanticSpryker\Zed\Log;
 
-use ValanticSpryker\Shared\Log\LogConstants;
 use Spryker\Zed\Log\LogConfig as SprykerLogConfig;
+use ValanticSpryker\Shared\Log\LogConstants;
 
 class LogConfig extends SprykerLogConfig
 {

@@ -4,9 +4,9 @@ declare(strict_types = 1);
 
 namespace ValanticSpryker\Zed\SearchElasticsearch\Business;
 
-use ValanticSpryker\Shared\SearchElasticsearch\ElasticaClient\ElasticaClientFactory;
 use Spryker\Shared\SearchElasticsearch\ElasticaClient\ElasticaClientFactoryInterface;
 use Spryker\Zed\SearchElasticsearch\Business\SearchElasticsearchBusinessFactory as SprykerSearchElasticsearchBusinessFactory;
+use ValanticSpryker\Shared\SearchElasticsearch\ElasticaClient\ElasticaClientFactory;
 
 /**
  * @method \Spryker\Zed\SearchElasticsearch\SearchElasticsearchConfig getConfig()
