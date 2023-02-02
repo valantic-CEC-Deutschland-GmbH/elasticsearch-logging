@@ -1,0 +1,40 @@
+{
+    "name": "valantic-spryker/elasticsearch-logging",
+    "type": "library",
+    "description": "Adds spryker logclient to elasticsearch, you will be able to see executed elasticsearch api calls with its details.",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.4",
+        "spryker/log": "^3.0.0",
+        "spryker/search-elasticsearch": "^1.13.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ValanticSpryker\\": "src/ValanticSpryker/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ValanticSprykerTest\\": "tests/ValanticSprykerTest/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "gitlab-domains": [
+            "gitlab.nxs360.com"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Valantic",
+            "homepage": "https://www.valantic.com"
+        }
+    ],
+    "keywords": [
+        "spryker"
+    ],
+    "include-path": [
+        "src/"
+    ]
+}
