@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace ValanticSpryker\Yves\Log;
 
 use Monolog\Formatter\FormatterInterface;
@@ -13,16 +15,16 @@ class LogFactory extends SprykerLogFactory
   /**
    * @return \Spryker\Shared\Log\Processor\ProcessorInterface
    */
-  public function createRequestProcessor(): ProcessorInterface
-  {
-    return new RequestProcessor($this->createSanitizer());
-  }
+    public function createRequestProcessor(): ProcessorInterface
+    {
+        return new RequestProcessor($this->createSanitizer());
+    }
 
   /**
    * @return \Monolog\Formatter\FormatterInterface
    */
-  protected function createLogstashFormatter(): FormatterInterface
-  {
-    return new LogstashFormatter(APPLICATION, null, 'extra', 'context', $this->getConfig()->getMaxNormalizeDepth());
-  }
+    protected function createLogstashFormatter(): FormatterInterface
+    {
+        return new LogstashFormatter(APPLICATION, null, 'extra', 'context', $this->getConfig()->getMaxNormalizeDepth());
+    }
 }

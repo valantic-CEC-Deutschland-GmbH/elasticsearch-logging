@@ -5,10 +5,10 @@ declare(strict_types = 1);
 namespace ValanticSpryker\Glue\Log;
 
 use Monolog\Formatter\FormatterInterface;
-use ValanticSpryker\Shared\Log\Processor\RequestProcessor;
-use ValanticSpryker\Zed\Log\Communication\Formatter\LogstashFormatter;
 use Spryker\Glue\Log\LogFactory as SprykerLogFactory;
 use Spryker\Shared\Log\Processor\ProcessorInterface;
+use ValanticSpryker\Shared\Log\Processor\RequestProcessor;
+use ValanticSpryker\Zed\Log\Communication\Formatter\LogstashFormatter;
 
 /**
  * @method \ValanticSpryker\Glue\Log\LogConfig getConfig()
