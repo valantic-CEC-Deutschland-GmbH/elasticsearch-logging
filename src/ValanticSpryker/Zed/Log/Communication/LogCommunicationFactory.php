@@ -6,13 +6,13 @@ namespace ValanticSpryker\Zed\Log\Communication;
 
 use Monolog\Formatter\FormatterInterface;
 use Spryker\Shared\Log\Processor\ProcessorInterface;
-use ValanticSpryker\Zed\Log\Communication\Formatter\LogstashFormatter;
 use Spryker\Zed\Log\Communication\LogCommunicationFactory as SprykerLogCommunicationFactory;
 use ValanticSpryker\Shared\Log\Processor\RequestProcessor;
+use ValanticSpryker\Zed\Log\Communication\Formatter\LogstashFormatter;
 
 /**
  * @method \Spryker\Zed\Log\Business\LogFacadeInterface getFacade()
- * @method \ValanticSpryker\Zed\Log\LogConfig getConfig()
+ * @method \Spryker\Zed\Log\LogConfig getConfig()
  */
 class LogCommunicationFactory extends SprykerLogCommunicationFactory
 {
@@ -21,16 +21,16 @@ class LogCommunicationFactory extends SprykerLogCommunicationFactory
    *
    * @return \Spryker\Shared\Log\Processor\ProcessorInterface
    */
-  public function createRequestProcessorPublic(): ProcessorInterface
-  {
-    return new RequestProcessor($this->createSanitizer());
-  }
+    public function createRequestProcessorPublic(): ProcessorInterface
+    {
+        return new RequestProcessor($this->createSanitizer());
+    }
 
   /**
    * @return \Monolog\Formatter\FormatterInterface
    */
-  protected function createLogstashFormatter(): FormatterInterface
-  {
-      return new LogstashFormatter(APPLICATION, null, 'extra', 'context', $this->getConfig()->getMaxNormalizeDepth());
-  }
+    protected function createLogstashFormatter(): FormatterInterface
+    {
+        return new LogstashFormatter(APPLICATION, null, 'extra', 'context', $this->getConfig()->getMaxNormalizeDepth());
+    }
 }
