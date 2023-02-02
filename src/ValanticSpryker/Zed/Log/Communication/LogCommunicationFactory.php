@@ -14,7 +14,17 @@ use Spryker\Zed\Log\Communication\LogCommunicationFactory as SprykerLogCommunica
  */
 class LogCommunicationFactory extends SprykerLogCommunicationFactory
 {
-    /**
+  /**
+   * Deprecated: Will be renamed to createRequestProcessor() in the next major release
+   *
+   * @return \Spryker\Shared\Log\Processor\ProcessorInterface
+   */
+  public function createRequestProcessorPublic(): ProcessorInterface
+  {
+    return new RequestProcessor($this->createSanitizer());
+  }
+
+  /**
      * @return \Monolog\Formatter\FormatterInterface
      */
     protected function createLogstashFormatter(): FormatterInterface
