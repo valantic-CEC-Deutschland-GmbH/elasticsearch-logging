@@ -2,6 +2,8 @@
 
 declare(strict_types = 1);
 
+// phpcs:disable Spryker.MethodAnnotation.ConfigMethodAnnotation.Wrong
+
 namespace ValanticSpryker\Zed\Log\Communication;
 
 use Monolog\Formatter\FormatterInterface;
