@@ -12,7 +12,7 @@ use ValanticSpryker\Zed\Log\Communication\Formatter\LogstashFormatter;
 
 /**
  * @method \Spryker\Zed\Log\Business\LogFacadeInterface getFacade()
- * @method \Spryker\Zed\Log\LogConfig getConfig()
+ * @method \ValanticSpryker\Zed\Log\LogConfig getConfig()
  */
 class LogCommunicationFactory extends SprykerLogCommunicationFactory
 {

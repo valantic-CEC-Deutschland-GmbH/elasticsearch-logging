@@ -8,7 +8,7 @@ use Monolog\Formatter\FormatterInterface;
 use Spryker\Shared\Log\Processor\ProcessorInterface;
 use Spryker\Yves\Log\LogFactory as SprykerLogFactory;
 use ValanticSpryker\Shared\Log\Processor\RequestProcessor;
-use ValanticSpryker\Zed\Log\Communication\Formatter\LogstashFormatter;
+use ValanticSpryker\Yves\Log\Communication\Formatter\LogstashFormatter;
 
 /**
  * @method \ValanticSpryker\Yves\Log\LogConfig getConfig()
