@@ -19,11 +19,6 @@ use ValanticSpryker\Shared\Log\Processor\RequestProcessor;
 class RequestProcessorTest extends Unit
 {
   /**
-   * @var
-   */
-    protected $businessFactory;
-
-  /**
    * @return void
    */
     protected function _before(): void

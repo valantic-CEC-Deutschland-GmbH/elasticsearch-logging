@@ -19,11 +19,6 @@ use ValanticSpryker\Zed\SearchElasticsearch\Business\SearchElasticsearchBusiness
 class SearchElasticsearchBusinessFactoryTest extends Unit
 {
   /**
-   * @var
-   */
-    protected $businessFactory;
-
-  /**
    * @return void
    */
     protected function _before(): void
@@ -36,8 +31,9 @@ class SearchElasticsearchBusinessFactoryTest extends Unit
    */
     public function testCreateElasticsearchClientFactory(): void
     {
-        $this->businessFactory = new SearchElasticsearchBusinessFactory();
-
-        $this->assertInstanceOf(ElasticaClientFactory::class, $this->businessFactory->createElasticsearchClientFactory());
+        $this->assertInstanceOf(ElasticaClientFactory::class,
+          (new SearchElasticsearchBusinessFactory())
+            ->createElasticsearchClientFactory()
+        );
     }
 }
