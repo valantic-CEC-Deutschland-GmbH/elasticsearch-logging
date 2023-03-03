@@ -5,11 +5,14 @@ declare(strict_types = 1);
 namespace ValanticSpryker\Yves\Log;
 
 use Monolog\Formatter\FormatterInterface;
-use Monolog\Formatter\LogstashFormatter;
 use Spryker\Shared\Log\Processor\ProcessorInterface;
 use Spryker\Yves\Log\LogFactory as SprykerLogFactory;
 use ValanticSpryker\Shared\Log\Processor\RequestProcessor;
+use ValanticSpryker\Zed\Log\Communication\Formatter\LogstashFormatter;
 
+/**
+ * @method \ValanticSpryker\Yves\Log\LogConfig getConfig()
+ */
 class LogFactory extends SprykerLogFactory
 {
   /**
