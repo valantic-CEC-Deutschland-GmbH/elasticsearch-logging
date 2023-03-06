@@ -1,0 +1,12 @@
+{
+  "branches": ["master"],
+  "dryRun": true,
+  "plugins": [
+    [
+      "@semantic-release/gitlab",
+      {
+        "gitlabUrl": "https://gitlab.nxs360.com"
+      }
+    ]
+  ]
+}

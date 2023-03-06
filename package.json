@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "@codedependant/semantic-release-docker": "^4.3.0",
+    "@semantic-release/gitlab": "^11.0.1",
+    "semantic-release": "^20.1.1"
+  }
+}
