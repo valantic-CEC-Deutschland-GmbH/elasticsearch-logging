@@ -40,8 +40,6 @@ $config[KernelConstants::PROJECT_NAMESPACES] = [
 $config[LogConstants::LOG_LEVEL] = Logger::DEBUG;
 ```
 
-Reference implementation: https://gitlab.nxs360.com/team-lr/glue-api
-
 Example GLUE Log (http://glue.de.spryker.local/catalog-search?q=Aloe)
 ```
 {"@timestamp":"2023-02-02T11:51:26.930431+00:00","@version":1,"host":"0b8dc0ded22f","message":"Request: https://lr-dev-search.e-spirit.cloud/rest/api/v1/prepared_search/cms_page/execute?query=Aloe&language=de&fq=myCategory%3Acontent | Headers: {\"Authorization\":\"Basic bHJAZS1zcGlyaXQuY29tOmM0OVNqQjFGcDZqUFVWZTY=\",\"Accept\":\"application\\/json\"}","type":"GLUE","channel":"Glue","level":"INFO","monolog_level":200,"extra":{"environment":{"application":"GLUE","environment":"docker.dev","store":null,"codeBucket":"DE","locale":"de_DE"},"server":{"url":"http://glue.de.spryker.local/catalog-search?q=Aloe","is_https":false,"hostname":"glue.de.spryker.local","user_agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36","user_ip":"172.18.0.21","request_method":"GET","referer":null},"request":{"message":"Request: https://lr-dev-search.e-spirit.cloud/rest/api/v1/prepared_search/cms_page/execute?query=Aloe&language=de&fq=myCategory%3Acontent | Headers: {\"Authorization\":\"Basic bHJAZS1zcGlyaXQuY29tOmM0OVNqQjFGcDZqUFVWZTY=\",\"Accept\":\"application\\/json\"}","context":[],"level":200,"level_name":"INFO","channel":"Glue","datetime":"2023-02-02T11:51:26.930431+00:00","extra":{"environment":{"application":"GLUE","environment":"docker.dev","store":null,"codeBucket":"DE","locale":"de_DE"},"server":{"url":"http://glue.de.spryker.local/catalog-search?q=Aloe","is_https":false,"hostname":"glue.de.spryker.local","user_agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36","user_ip":"172.18.0.21","request_method":"GET","referer":null}}}}}
@@ -69,3 +67,31 @@ Example ZED Log (console setup:search)
 ```
 
 Yves untested ;-)
+
+# Reference implementation
+- https://gitlab.nxs360.com/team-lr/glue-api
+
+# HowTos Cli
+
+PHP Container: `docker run -it --rm --name my-running-script -v "$PWD":/data spryker/php:latest bash`
+
+Run Tests: `codecept run --env standalone`
+
+Fixer: `vendor/bin/phpcbf --standard=phpcs.xml --report=full src/ValanticSpryker/`
+
+Disable opcache: `mv /usr/local/etc/php/conf.d/docker-php-ext-opcache.ini /usr/local/etc/php/conf.d/docker-php-ext-opcache.iniold`
+
+XDEBUG:
+- `ip addr | grep '192.'`
+- `$docker-php-ext-enable xdebug`
+- configure phpstorm (add 127.0.0.1 phpstorm server with name valantic)
+- `$PHP_IDE_CONFIG=serverName=valantic php -dxdebug.mode=debug -dxdebug.client_host=192.168.87.39 -dxdebug.start_with_request=yes ./vendor/bin/codecept run --env standalone`
+
+- Run Tests with coverage: `XDEBUG_MODE=coverage vendor/bin/codecept run --env standalone --coverage --coverage-xml --coverage-html`
+
+# HowTo Setup new Repo
+- create new project (https://gitlab.nxs360.com/projects/new?namespace_id=461#blank_project)
+  - visibility -> Internal
+- push in repo boilerplate copied of example-package (https://gitlab.nxs360.com/packages/php/spryker/example-package)
+- search for string `example-package` and add your descriptions
+- add your custom code / copy in your code / rename namespace to ValanticSpryker
