@@ -1,6 +1,6 @@
 {
   "branches": ["master"],
-  "dryRun": true,
+  "dryRun": false,
   "plugins": [
     [
       "@semantic-release/gitlab",
@@ -8,7 +8,17 @@
         "gitlabUrl": "https://gitlab.nxs360.com"
       }
     ],
-    "@semantic-release/commit-analyzer",
+    ["@semantic-release/commit-analyzer", {
+          "preset": "conventionalcommits",
+          "releaseRules": [
+            {"type": "docs", "release": "patch"},
+            {"type": "refactor", "release": "patch"},
+            {"type": "style", "release": "patch"}
+          ],
+          "parserOpts": {
+            "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
+          }
+        }],
     "@semantic-release/release-notes-generator"
   ]
 }
