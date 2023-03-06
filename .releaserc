@@ -1,6 +1,5 @@
 {
   "branches": ["master"],
-  "dryRun": false,
   "plugins": [
     [
       "@semantic-release/gitlab",
