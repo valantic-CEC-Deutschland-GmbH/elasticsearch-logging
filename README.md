@@ -1,6 +1,8 @@
 # Elasticsearch logging
 
-[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.4-8892BF.svg)](https://php.net/)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.0-8892BF.svg)](https://php.net/)
+[![coverage report](https://gitlab.nxs360.com/packages/php/spryker/elasticsearch-logging/badges/master/pipeline.svg)](https://gitlab.nxs360.com/packages/php/spryker/elasticsearch-logging/-/pipelines?page=1&scope=all&ref=master)
+[![coverage report](https://gitlab.nxs360.com/packages/php/spryker/elasticsearch-logging/badges/master/coverage.svg)](https://packages.gitlab-pages.nxs360.com/php/spryker/elasticsearch-logging)
 
  - Adds spryker logging to elasticsearch
  - Enables MAX_NORMALIZE_DEPTH configuration (to avoide error `Over 9 levels deep, aborting normalization` in logging)
