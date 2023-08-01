@@ -2,7 +2,7 @@
     "name": "valantic-cec/elasticsearch-logging",
     "type": "library",
     "description": "Adds spryker logclient to elasticsearch, you will be able to see executed elasticsearch api calls with its details.",
-    "license": "MIT",
+    "license": "proprietary",
     "require": {
         "php": ">=7.4",
         "spryker/log": ">=3.0.0",
