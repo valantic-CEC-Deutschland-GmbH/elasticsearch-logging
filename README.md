@@ -8,7 +8,7 @@
 
 ### Install package
 ```
-composer req valantic-cec/elasticsearch-logging
+composer req valantic-spryker/elasticsearch-logging
 ```
 
 ### Update your shared config
