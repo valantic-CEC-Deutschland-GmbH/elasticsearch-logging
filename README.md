@@ -1,35 +1,14 @@
 # Elasticsearch logging
 
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.0-8892BF.svg)](https://php.net/)
-[![coverage report](https://gitlab.nxs360.com/packages/php/spryker/elasticsearch-logging/badges/master/pipeline.svg)](https://gitlab.nxs360.com/packages/php/spryker/elasticsearch-logging/-/pipelines?page=1&scope=all&ref=master)
-[![coverage report](https://gitlab.nxs360.com/packages/php/spryker/elasticsearch-logging/badges/master/coverage.svg)](https://packages.gitlab-pages.nxs360.com/php/spryker/elasticsearch-logging)
 
+## Description
  - Adds spryker logging to elasticsearch
  - Enables MAX_NORMALIZE_DEPTH configuration (to avoide error `Over 9 levels deep, aborting normalization` in logging)
 
-## Integration
-
-### Add composer registry
-```
-composer config repositories.gitlab.nxs360.com/461 '{"type": "composer", "url": "https://gitlab.nxs360.com/api/v4/group/461/-/packages/composer/packages.json"}'
-```
-
-### Add Gitlab domain
-```
-composer config gitlab-domains gitlab.nxs360.com
-```
-
-### Authentication
-Go to Gitlab and create a personal access token. Then create an **auth.json** file:
-```
-composer config gitlab-token.gitlab.nxs360.com <personal_access_token>
-```
-
-Make sure to add **auth.json** to your **.gitignore**.
-
 ### Install package
 ```
-composer req valantic-spryker/elasticsearch-logging
+composer req valantic-cec/elasticsearch-logging
 ```
 
 ### Update your shared config
@@ -69,9 +48,6 @@ Example ZED Log (console setup:search)
 ```
 
 Yves untested ;-)
-
-# Reference implementation
-- https://gitlab.nxs360.com/team-lr/glue-api
 
 # HowTos Cli
 
